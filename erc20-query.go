@@ -14,9 +14,9 @@ var rpcAddrStr, accountAddrStr, contractAddr string
 
 func init() {
 	RootCmd.AddCommand(queryBalanceCmd)
-	queryBalanceCmd.PersistentFlags().StringVar(&rpcAddrStr, "rpc", "http://192.168.3.200:8545", "eth node addr")
+	queryBalanceCmd.PersistentFlags().StringVar(&rpcAddrStr, "rpc", "http://127.0.0.1:8545", "eth node addr")
 	queryBalanceCmd.PersistentFlags().StringVar(&accountAddrStr, "addr", "0x4cb75889e2918954a63853af1a2ba2a5bc7c5f2d", "eth address")
-	queryBalanceCmd.PersistentFlags().StringVar(&contractAddr, "ctct", "0xdd0b8f44e2ca8386eac1962375ffd6141d775e3b", "eth contract addr")
+	queryBalanceCmd.PersistentFlags().StringVar(&contractAddr, "ctct", "0xad4d74d4ad72e92523b45a1cf64c6f027ce37ff9", "eth contract addr")
 }
 
 var queryBalanceCmd = &cobra.Command{
